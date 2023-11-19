@@ -41,6 +41,7 @@ export default function jobDashboard() {
                 metadata: {
                     name,
                     description,
+                    salary,
                 },
                 to: address ?? "",
                 supply: 1,

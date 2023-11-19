@@ -1,17 +1,17 @@
-// import Layout from "@/layout/Layout";
+import Layout from "@/layout/Layout";
 
-// export default function Profile() {
-//     return (
-//         <Layout>
-//             <div>
-//                 <h1 className="text-6xl font-semibold my-4 text-center">
-//                     My Profile
-//                 </h1>
+export default function Profile() {
+    return (
+        <Layout>
+            <div>
+                <h1 className="text-6xl font-semibold my-4 text-center">
+                    This section in progress...
+                </h1>
 
-//                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6 ">
-//                     {/* Mapping Owned Profile */}
-//                 </div>
-//             </div>
-//         </Layout>
-//     );
-// }
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6 ">
+                    {/* Mapping Owned Profile */}
+                </div>
+            </div>
+        </Layout>
+    );
+}

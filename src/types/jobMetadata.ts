@@ -2,7 +2,7 @@ export type JobMetadata = {
     metadata: {
         name: string;
         description: string;
-        seller_fee_basis_points?: number;
+        salary: string;
     };
     to: string;
     supply: 1;
