@@ -7,7 +7,6 @@ import { useState } from "react";
 export default function jobDashboard() {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
-    const [salary, setSalary] = useState("");
 
     const { nft_contract } = getNFTContract();
 
@@ -23,17 +22,12 @@ export default function jobDashboard() {
     ) => {
         setDescription(event.target.value);
     };
-    const handleSalaryChange = (
-        event: React.ChangeEvent<HTMLInputElement>
-    ) => {
-        setSalary(event.target.value);
-    };
 
     const handleSubmit = async (event: React.FormEvent) => {
         try {
             event.preventDefault();
 
-            if (name === "" || description === "" || salary === "" ) {
+            if (name === "" || description === ""  ) {
                 return;
             }
 
@@ -41,8 +35,7 @@ export default function jobDashboard() {
                 metadata: {
                     name,
                     description,
-                    salary,
-                },
+             },
                 to: address ?? "",
                 supply: 1,
             };
@@ -83,17 +76,6 @@ export default function jobDashboard() {
                                 placeholder="Description of the position"
                                 value={description}
                                 onChange={handleDescriptionChange}
-                            />
-                        </div>
-                        <div>
-                            <label className="font-bold text-xl">
-                                Salary:{" "}
-                            </label>
-                            <input
-                                className=" ml-2 bg-gray-800"
-                                placeholder="Range of salary"
-                                value={salary}
-                                onChange={handleSalaryChange}
                             />
                         </div>
                         <button
